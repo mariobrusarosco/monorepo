@@ -1,0 +1,13 @@
+yarn run v1.22.19
+$ /Users/mariobrusarosco/Personal/digital-garden/dg/node_modules/.bin/nx g @nrwl/nx-cloud:init --no-analytics --installationSource=create-nx-workspace
+
+>  NX  Generating @nrwl/nx-cloud:init
+
+
+ >  NX   read ECONNRESET
+
+   Pass --verbose to see the stacktrace.
+
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+error Command failed with exit code 1.
