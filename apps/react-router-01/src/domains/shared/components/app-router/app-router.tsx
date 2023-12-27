@@ -1,4 +1,4 @@
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ErrorScreen } from '../../screens/error';
 import { AppMainLoader } from '../app-main-loader/app-main-loader';
 import RootLayout from '../root-layout/root-layout';
@@ -6,7 +6,8 @@ import { PublicLayout } from '../public-layout/pubic-layout';
 import { HomeScreen } from '../../../home/screens/home/home';
 import { AuthenticatedLayout } from '../../auth/components/authenticated-layout/authenticated-layout';
 import { LoginScreen } from '../../auth/screens/login/login';
-import { oneWordRouting } from '../../../../routing/one-word-routing';
+import { oneWordRoutingWithLoaders } from '../../../../routing/one-word-routing-with-loaders';
+import { oneWordRoutingWithReactQuery } from '../../../../routing/one-word-routing-with-react-query';
 
 export const AppRouter = () => {
   const router = createBrowserRouter([
@@ -21,11 +22,11 @@ export const AppRouter = () => {
           children: [
             {
               path: 'with-loaders',
-              children: oneWordRouting,
+              children: oneWordRoutingWithLoaders,
             },
             {
-              path: 'with-react-query-queries',
-              children: oneWordRouting,
+              path: 'with-react-query',
+              children: oneWordRoutingWithReactQuery,
             },
           ],
         },

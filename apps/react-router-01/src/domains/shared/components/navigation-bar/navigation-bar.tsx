@@ -11,9 +11,7 @@ export const NavigationBar = () => {
           <NavLink to="with-loaders">With React Router Loaders</NavLink>
         </li>
         <li>
-          <NavLink to="with-react-query-queries">
-            With react query queries
-          </NavLink>
+          <NavLink to="with-react-query">With react query</NavLink>
         </li>
       </ul>
     </nav>

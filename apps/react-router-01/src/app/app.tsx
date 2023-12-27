@@ -1,4 +1,4 @@
-import { AppRouter } from '../domains/shared/components/app-route/app-router';
+import { AppRouter } from '../domains/shared/components/app-router/app-router';
 import './App.css';
 
 const AppWithProviders = ({ children }: { children: React.ReactNode }) => {
