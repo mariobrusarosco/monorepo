@@ -2,7 +2,9 @@
   "name": "@react-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev:react-router": "nx serve react-router-01"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",
@@ -10,9 +12,12 @@
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
     "react-router-dom": "6.11.2",
-    "styled-components": "5.3.6"
+    "styled-components": "5.3.6",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
     "@nx/cypress": "17.2.7",
     "@nx/devkit": "17.2.7",
     "@nx/eslint": "17.2.7",
@@ -50,6 +55,7 @@
     "prettier": "^2.6.2",
     "typescript": "~5.2.2",
     "vite": "^5.0.0",
+    "vite-plugin-dts": "~2.3.0",
     "vitest": "~0.34.6"
   }
 }
