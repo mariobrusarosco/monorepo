@@ -5,10 +5,15 @@ export const NavigationBar = () => {
     <nav>
       <ul>
         <li>
-          <NavLink to="/">Hpme</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/tables">Tables</NavLink>
+          <NavLink to="with-loaders">With React Router Loaders</NavLink>
+        </li>
+        <li>
+          <NavLink to="with-react-query-queries">
+            With react query queries
+          </NavLink>
         </li>
       </ul>
     </nav>
