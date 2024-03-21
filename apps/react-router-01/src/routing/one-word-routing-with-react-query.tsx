@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import { GameScreen } from '../domains/games/screens/game';
-import { TableScreen } from '../domains/tables/screens/table/table';
-import { TablesScreen } from '../domains/tables/screens/tables/tables';
+import { TableScreen } from '../domains/tables/screens/with-loaders/table/table';
+import { TablesScreen } from '../domains/tables/screens/with-loaders/tables/tables';
 
 export const oneWordRoutingWithReactQuery = [
   {
