@@ -1,11 +1,11 @@
 {
   "name": "@react-monorepo/source",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "dev:react-router": "nx serve react-router-01",
     "dev": "nx serve playground",
-    "test-dev": "nx test playground --watch"
+    "dev:test": "nx test playground --watch"
   },
   "private": true,
   "dependencies": {
