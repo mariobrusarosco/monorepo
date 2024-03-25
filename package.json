@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:react-router": "nx serve react-router-01"
+    "dev:react-router": "nx serve react-router-01",
+    "dev": "nx serve playground",
+    "test-dev": "nx test playground --watch"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
     "@vitejs/plugin-react": "^4.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "@vitest/coverage-v8": "~0.34.6",
     "@vitest/ui": "~0.34.6",
     "babel-plugin-styled-components": "1.10.7",
