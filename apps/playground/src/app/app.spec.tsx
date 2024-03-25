@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, logRoles } from '@testing-library/react';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -11,6 +11,7 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     );
+    logRoles(baseElement);
     expect(baseElement).toBeTruthy();
   });
 
@@ -20,6 +21,7 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     );
+
     expect(getByText(/Welcome playground/gi)).toBeTruthy();
   });
 });

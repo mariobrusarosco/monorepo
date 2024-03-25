@@ -1,4 +1,5 @@
 import './app.css';
+import { Testing } from './domains/testing/screens/testing';
 
 import NxWelcome from './nx-welcome';
 
@@ -38,7 +39,7 @@ export function App() {
           path="/testing"
           element={
             <div>
-              <Link to="/">Click here to go back to root page.</Link>
+              <Testing />
             </div>
           }
         />
