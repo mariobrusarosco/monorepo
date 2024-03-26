@@ -1,4 +1,5 @@
 import './app.css';
+import { ReactQuery } from './domains/react-query/screens/reac-query';
 import { Testing } from './domains/testing/screens/testing';
 
 import NxWelcome from './nx-welcome';
@@ -8,14 +9,6 @@ import { Route, Routes, Link } from 'react-router-dom';
 export function App() {
   return (
     <div>
-      <NxWelcome title="playground" />
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
       <div role="navigation">
         <ul>
           <li>
@@ -23,6 +16,9 @@ export function App() {
           </li>
           <li>
             <Link to="/testing">Testing</Link>
+          </li>
+          <li>
+            <Link to="/react-query">React Query</Link>
           </li>
         </ul>
       </div>
@@ -35,14 +31,8 @@ export function App() {
             </div>
           }
         />
-        <Route
-          path="/testing"
-          element={
-            <div>
-              <Testing />
-            </div>
-          }
-        />
+        <Route path="/testing" element={<Testing />} />
+        <Route path="/react-query" element={<ReactQuery />} />
       </Routes>
       {/* END: routes */}
     </div>
