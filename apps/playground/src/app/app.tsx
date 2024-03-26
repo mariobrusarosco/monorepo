@@ -1,5 +1,5 @@
 import './app.css';
-import { ReactQuery } from './domains/react-query/screens/reac-query';
+import { ReactQuery } from './domains/react-query/screens/react-query';
 import { Testing } from './domains/testing/screens/testing';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
