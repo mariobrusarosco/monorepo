@@ -2,6 +2,7 @@ import { createContext, useState } from 'react';
 
 const defaultValues = {
   mode: 'dark',
+  toggleThemeMode: () => undefined,
 };
 
 const ThemeContext = createContext<null | typeof defaultValues>(null);
