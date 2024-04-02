@@ -1,6 +1,6 @@
 import { useNotification } from '../context/notification-context';
 
-export const UsingViaCustomHookAndUseReducer = () => {
+export const UsingWithUseReducer = () => {
   const { state, dispatch } = useNotification();
   const handleNewNotification = () => {
     dispatch({ type: 'SHOW_NOTIFICATION', payload: 'New notification' });

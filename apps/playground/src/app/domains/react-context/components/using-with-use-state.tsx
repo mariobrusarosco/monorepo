@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../context/theme-context';
 
-export const UsingViaUseContext = () => {
+export const UsingWithUseState = () => {
   const { mode, toggleThemeMode } = useContext(ThemeContext);
 
   return (
