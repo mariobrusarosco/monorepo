@@ -11,6 +11,7 @@ export const ReactQuery = () => {
       <RefetchWhenVarChanges />
       <QueryFuncionsOtherThanFetchOrRequests />
       <QueryFuncionsWithArguments />
+      <QueryKeysWithDynamicValues />
     </div>
   );
 };
