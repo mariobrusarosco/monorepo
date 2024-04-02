@@ -1,4 +1,6 @@
 import { QueryFuncionsOtherThanFetchOrRequests } from '../components/query-funcions-other-than-fetch-or-requests.tsx';
+import { QueryFuncionsWithArguments } from '../components/query-funcions-with-arguments.js';
+import { QueryKeysWithDynamicValues } from '../components/query-keys-with-dynamic-values.js';
 import { RefetchWhenVarChanges } from '../components/refetch-when-var-changes';
 
 export const ReactQuery = () => {
@@ -8,6 +10,7 @@ export const ReactQuery = () => {
 
       <RefetchWhenVarChanges />
       <QueryFuncionsOtherThanFetchOrRequests />
+      <QueryFuncionsWithArguments />
     </div>
   );
 };
