@@ -1,17 +1,18 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../context/theme-context';
+import { UsingViaUseContext } from '../components/using-via-custom-hook-and-use-reducer';
+import { UsingViaCustomHookAndUseReducer } from '../components/using-via-use-context';
+import { NotificationProvider } from '../context/notification-context';
 
 export const ReactContextScreen = () => {
-  const { mode, toggleThemeMode } = useContext(ThemeContext);
-
   return (
     <div>
       <h2>React Context</h2>
 
       <div>
-        <h3>Theme Context</h3>
-        <p>Theme mode: {mode}</p>
-        <button onClick={toggleThemeMode}>toggle theme mode</button>
+        <UsingViaUseContext />
+
+        <NotificationProvider>
+          <UsingViaCustomHookAndUseReducer />
+        </NotificationProvider>
       </div>
     </div>
   );
