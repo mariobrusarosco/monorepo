@@ -8,9 +8,9 @@ export const ReactQuery = () => {
     <div>
       <h1>React Query</h1>
 
-      <RefetchWhenVarChanges />
+      {/* <RefetchWhenVarChanges />
       <QueryFuncionsOtherThanFetchOrRequests />
-      <QueryFuncionsWithArguments />
+      <QueryFuncionsWithArguments /> */}
       <QueryKeysWithDynamicValues />
     </div>
   );
