@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { CleanupExample, Cleanup } from '../components/use-effect';
+import { DealingWithAsyncEffects } from '../components/use-effect';
 
 export const UseEffectScreen = () => {
   return (
@@ -10,8 +9,9 @@ export const UseEffectScreen = () => {
         here.
       </h2>
 
-      <Cleanup />
+      {/* <Cleanup /> */}
       {/* <CancellingEffectsViaCleanup /> */}
+      <DealingWithAsyncEffects />
     </div>
   );
 };
