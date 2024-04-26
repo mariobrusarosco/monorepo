@@ -11,8 +11,6 @@ export const ReactQuery = () => {
 
       {/* <WhenDoesAQueryIsRefetched /> */}
       {/* <InactiveQueries /> */}
-      >Query
-
       {/* <RefetchWhenVarChanges /> */}
       {/* <QueryFuncionsOtherThanFetchOrRequests /> */}
       {/* <QueryFuncionsWithArguments /> */}

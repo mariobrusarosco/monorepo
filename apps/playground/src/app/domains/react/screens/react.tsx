@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { UseEffectScreen } from './use-effect';
-import { GetTheValueOfASearchInput } from '../components/get-the-value-of-a-search-input';
+import { SimpleRawForm } from '../components/forms';
+import { UseRef } from '../components/use-ref';
 
 export const ReactScreen = () => {
   return (
@@ -15,12 +15,14 @@ export const ReactScreen = () => {
         </li>
       </ul>
 
-      <GetTheValueOfASearchInput />
+      <SimpleRawForm />
+      {/* <GetTheValueOfASearchInput /> */}
 
-      <UseEffectScreen />
+      {/* <UseEffectScreen /> */}
 
       {/* <Route path="use-effect" element={<UseEffectScreen />} />
       <Outlet /> */}
+      <UseRef />
     </div>
   );
 };

@@ -129,6 +129,14 @@ const DealingWithAsyncEffects = () => {
     <div>
       <h2>Dealing with Async Effects</h2>
 
+      <input
+        type="text"
+        name="postId"
+        onChange={(e) => setPostId(e.target.value)}
+        value={postId}
+        placeholder="Type a number here to change the postId state"
+      />
+
       <p>
         Changing this input field, will change a <strong>postId</strong> state.{' '}
         <strong>postId</strong>is being watched by an useEffect. let's say we
@@ -137,6 +145,16 @@ const DealingWithAsyncEffects = () => {
         because now we need a new version of <b>handleFetchData</b>: A version
         that will have pass "2" to <b>fetchData()</b>
       </p>
+
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {results.map((result, index) => (
+            <li key={index}>{result.title}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
