@@ -6,7 +6,14 @@ export const ReactContextScreen = () => {
   return (
     <div>
       <h2>React Context</h2>
-
+      <ul>
+        <li>
+      <strong>ThemeProvider</strong> ----> <strong>useState</strong>
+        </li>
+        <li>
+        <strong>NotificationProvider</strong> ----> <strong>useReducer</strong>
+        </li>
+      </ul>
       <div>
         <UsingWithUseState />
 

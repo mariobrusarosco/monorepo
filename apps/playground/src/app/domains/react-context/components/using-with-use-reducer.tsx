@@ -8,7 +8,7 @@ export const UsingWithUseReducer = () => {
 
   return (
     <>
-      <h3>Using React Context via custom Hook and useReducer</h3>
+      <h3>via custom Hook</h3>
       <p>Message: {state.message}</p>
       <button onClick={handleNewNotification}>Send Notification</button>
     </>

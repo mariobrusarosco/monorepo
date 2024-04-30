@@ -6,7 +6,7 @@ export const UsingWithUseState = () => {
 
   return (
     <>
-      <h3>Using React Context via useContext</h3>
+      <h3>via useContext</h3>
       <p>Theme mode: {mode}</p>
       <button onClick={toggleThemeMode}>toggle theme mode</button>
     </>
