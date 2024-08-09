@@ -1,9 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+const IndexScreen = () => {
+  return (
+    <div data-ui="" className="">
+      Hello from IndexScreen
+    </div>
+  );
+};
+
 export const Route = createFileRoute('/')({
   component: IndexScreen,
 });
-
-function IndexScreen() {
-  return <div className="p-2">Hello from IndexScreen</div>;
-}

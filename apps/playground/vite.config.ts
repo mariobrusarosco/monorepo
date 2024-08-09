@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
+import { routerPlugin } from './src/app/domains/routing/tanstack/router-plugin';
 
 export default defineConfig({
   root: __dirname,
@@ -18,14 +18,7 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [
-    TanStackRouterVite({
-      routesDirectory: __dirname + '/src/routes',
-      generatedRouteTree: 'apps/playground/src/routeTree.gen.ts',
-    }),
-    react(),
-    nxViteTsPaths(),
-  ],
+  plugins: [routerPlugin(), react(), nxViteTsPaths()],
 
   // Uncomment this if you are using workers.
   // worker: {
