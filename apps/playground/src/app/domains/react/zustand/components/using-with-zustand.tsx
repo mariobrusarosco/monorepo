@@ -1,14 +1,7 @@
-import {
-  useLogin,
-  useLogout,
-  useUser,
-  useAddToCart,
-  useCart,
-} from '../../react-context/context/shopping-cart/zustand';
+import { useCartStore } from '../../react/react-context/context/shopping-cart/zustand';
 
 const AuthActions = () => {
-  const login = useLogin();
-  const logout = useLogout();
+  const { login, logout } = useCartStore();
 
   return (
     <div>
@@ -19,7 +12,7 @@ const AuthActions = () => {
 };
 
 const AuthArea = () => {
-  const user = useUser();
+  const { user } = useCartStore();
 
   return (
     <div>
@@ -30,7 +23,7 @@ const AuthArea = () => {
 };
 
 const AddToCartSection = () => {
-  const addToCart = useAddToCart();
+  const { addToCart } = useCartStore();
 
   return (
     <div>
@@ -42,7 +35,7 @@ const AddToCartSection = () => {
 };
 
 const CartDisplay = () => {
-  const cart = useCart();
+  const { cart } = useCartStore();
 
   return (
     <div>
@@ -56,10 +49,10 @@ const CartDisplay = () => {
   );
 };
 
-const UsingWithZustandPerformatic = () => {
+const UsingWithZustand = () => {
   return (
     <div>
-      <h2> With Zustand (Performatic)</h2>
+      <h2>With Zustand</h2>
       <AuthArea />
       <AuthActions />
       <AddToCartSection />
@@ -68,4 +61,4 @@ const UsingWithZustandPerformatic = () => {
   );
 };
 
-export { UsingWithZustandPerformatic };
+export { UsingWithZustand };

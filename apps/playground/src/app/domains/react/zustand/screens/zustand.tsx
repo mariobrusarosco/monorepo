@@ -1,7 +1,7 @@
-import { UsingWithCustomHook } from '../../react-context/components/using-with-custom-hook';
-import { UsingWithCustomHookPerformatic } from '../../react-context/components/using-with-custom-hook-performatic';
-import { ShoppingCartProvider } from '../../react-context/context/shopping-cart/context';
-import { ShoppingCartProviderPerf } from '../../react-context/context/shopping-cart/context-with-use-selector';
+import { UsingWithCustomHook } from '../../react/react-context/components/using-with-custom-hook';
+import { UsingWithCustomHookPerformatic } from '../../react/react-context/components/using-with-custom-hook-performatic';
+import { ShoppingCartProvider } from '../../react/react-context/context/shopping-cart/context';
+import { ShoppingCartProviderPerf } from '../../react/react-context/context/shopping-cart/context-with-use-selector';
 import { UsingWithZustand } from '../components/using-with-zustand';
 import { UsingWithZustandPerformatic } from '../components/using-with-zustand-performatic';
 
