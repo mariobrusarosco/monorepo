@@ -14,7 +14,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.circleci/config.yml"]
   },
-  "nxCloudAccessToken": "NWIyMDQ4MDctYTI5Mi00ZWU0LTlmZDMtZDkyYmRhYzBhNTlhfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "OWM3NjUwZTktNmVmYi00Y2Q2LWFkMDQtZjU2YmM3NWUxMzZifHJlYWQtd3JpdGU=",
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
