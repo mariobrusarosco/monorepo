@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../garden"
+    }
+  ],
+  "settings": {
+    "testing.automaticallyOpenPeekView": "never"
+  }
+}
