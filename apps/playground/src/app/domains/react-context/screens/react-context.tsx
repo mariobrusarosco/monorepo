@@ -8,10 +8,10 @@ export const ReactContextScreen = () => {
       <h2>React Context</h2>
       <ul>
         <li>
-      <strong>ThemeProvider</strong> ----> <strong>useState</strong>
+          <strong>ThemeProvider</strong> <strong>useState</strong>
         </li>
         <li>
-        <strong>NotificationProvider</strong> ----> <strong>useReducer</strong>
+          <strong>NotificationProvider</strong> <strong>useReducer</strong>
         </li>
       </ul>
       <div>

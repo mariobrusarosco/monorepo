@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "dev:react-router": "nx serve react-router-01",
     "dev": "nx serve playground",
     "dev:test": "nx run playground:test"
   },
@@ -19,7 +18,8 @@
     "react-is": "18.2.0",
     "react-router-dom": "6.11.2",
     "styled-components": "5.3.6",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",

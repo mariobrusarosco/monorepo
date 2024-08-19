@@ -2,14 +2,14 @@ import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
 // Opiton 1
-const fetchDynamicUser = async ({ userId }: { userId: string }) => {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/users/${userId}`
-  );
-  const data = await response.json();
+// const fetchDynamicUser = async ({ userId }: { userId: string }) => {
+//   const response = await fetch(
+//     `https://jsonplaceholder.typicode.com/users/${userId}`
+//   );
+//   const data = await response.json();
 
-  return data;
-};
+//   return data;
+// };
 
 // Opiton 2 (recommended)
 const fetchDynamicUserRecommendedWay = async ({
@@ -17,6 +17,7 @@ const fetchDynamicUserRecommendedWay = async ({
 }: {
   queryKey: string[];
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, userId] = queryKey;
 
   const response = await fetch(
@@ -28,7 +29,7 @@ const fetchDynamicUserRecommendedWay = async ({
 };
 
 export const QueryFuncionsWithArguments = () => {
-  const [userId, setUserId] = useState<string>('1');
+  const [userId] = useState<string>('1');
 
   // Opiton 1
   // const { data } = useQuery({

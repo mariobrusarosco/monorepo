@@ -4,7 +4,7 @@ import { Checkbox } from '../components/checkbox';
 import { Toggle } from '../components/toggle';
 import { Tooltip } from '../components/tooltip';
 
-const parseLikeFeedback = (people: string[]) => {
+export const parseLikeFeedback = (people: string[]) => {
   switch (people.length) {
     case 0:
       return 'No one likes this';
@@ -38,6 +38,8 @@ const displayLikeFeedback = ({
     a: 1,
     b: 2,
   };
+
+  console.log(alphabetPositionMapper);
 };
 
 export const Testing = () => {

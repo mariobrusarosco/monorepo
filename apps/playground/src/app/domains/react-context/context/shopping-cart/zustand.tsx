@@ -1,21 +1,22 @@
 import { create } from 'zustand';
 
-type ShoppingCartContextType = {
-  user: string;
+type Store = {
+  user: string | null;
   login: () => void;
   logout: () => void;
   addToCart: (item: string) => void;
-  removeFromCart: (item: string) => void;
+  // removeFromCart: (item: string) => void;
   cart: { item: string }[];
 };
 
-export const useCartStore = create((set) => ({
+export const useCartStore = create<Store>((set) => ({
   user: null,
   login: () => set({ user: 'Mario' }),
   logout: () => set({ user: null }),
-  addToCart: (item: any) => set((state) => ({ cart: [...state.cart, item] })),
-  removeFromCart: (item: any) =>
-    set((state) => ({ cart: state.cart.filter((i) => i !== item) })),
+  addToCart: (item: string) =>
+    set((state) => ({ cart: [...state.cart, { item }] })),
+  // removeFromCart: (item: string) =>
+  //   set((state) => ({ cart: state.cart.filter((i) => i !== item) })),
   cart: [],
 }));
 

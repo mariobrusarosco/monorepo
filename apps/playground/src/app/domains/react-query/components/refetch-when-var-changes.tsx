@@ -17,6 +17,8 @@ export const RefetchWhenVarChanges = () => {
     queryFn: fetchName,
   });
 
+  console.log({ data });
+
   return (
     <div>
       <h2>Refetching when a variable changes</h2>

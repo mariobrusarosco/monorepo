@@ -7,7 +7,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Route, Routes, Link } from 'react-router-dom';
 import { ReactScreen } from './domains/react/screens/react';
-import { UseEffectScreen } from './domains/react/screens/use-effect';
 
 const client = new QueryClient({
   defaultOptions: {
