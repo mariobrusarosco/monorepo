@@ -2,10 +2,7 @@
   "name": "@monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "build": "yarn nx run playground:build",
-    "dev": "yarn nx serve playground"
-  },
+  "scripts": {},
   "private": true,
   "dependencies": {
     "react": "18.3.1",
