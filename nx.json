@@ -14,7 +14,25 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.circleci/config.yml"]
   },
-  "nxCloudAccessToken": "NWIyMDQ4MDctYTI5Mi00ZWU0LTlmZDMtZDkyYmRhYzBhNTlhfHJlYWQtd3JpdGU=",
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "style": "styled-components",
+        "linter": "eslint",
+        "bundler": "vite",
+        "babel": true
+      },
+      "component": { "style": "styled-components" },
+      "library": {
+        "style": "styled-components",
+        "linter": "eslint",
+        "unitTestRunner": "vitest"
+      }
+    }
+  },
+  "nxCloudAccessToken": "ODJkYWNjZTMtZjJiNC00ODQwLTkxZWMtZjBkZTYwYmZiZjgwfHJlYWQtd3JpdGU=",
+  "defaultBase": "main",
+ 
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
