@@ -5,7 +5,7 @@ const StopwatchWithJsVariables = () => {
   const [seconds, setSeconds] = useState(0);
   const [running, setRunning] = useState(false);
 
-  let interval = null;
+  let interval: NodeJS.Timer | null = null;
 
   const toggleStopwatch = () => {
     if (!running) {
@@ -15,7 +15,9 @@ const StopwatchWithJsVariables = () => {
 
       setRunning(true);
     } else {
-      clearInterval(interval);
+      if (interval !== null) {
+        clearInterval(interval);
+      }
       interval = null;
       setRunning(false);
     }
@@ -132,7 +134,7 @@ const AcessingDomElements = () => {
 
 const WaitingForCSSAnimationsToEnd = () => {
   const [active, setActive] = useState(false);
-  const nodeRef = useRef<HTMLButtonElement | null>(null);
+  const nodeRef = useRef<HTMLDivElement | null>(null);
   const animating = useRef(false);
 
   const handleToggleAnimation = () => {

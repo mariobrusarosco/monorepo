@@ -1,6 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 
-async function getLocation() {
+type ILocation = {
+  coords: {
+    latitude: number;
+    longitude: number;
+  };
+};
+async function getLocation(): Promise<ILocation> {
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(resolve, reject);
   });
@@ -25,8 +31,8 @@ export const QueryFuncionsOtherThanFetchOrRequests = () => {
       <h2>Dealing with data other than fetch or network requests </h2>
       <p>
         Your location is:
-        {locationQuery.data.coords.latitude},
-        {locationQuery.data.coords.longitude}
+        {locationQuery.data?.coords.latitude}
+        {locationQuery.data?.coords.longitude}
       </p>
     </div>
   );

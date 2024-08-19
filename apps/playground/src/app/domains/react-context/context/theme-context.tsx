@@ -5,13 +5,15 @@ const defaultValues = {
   toggleThemeMode: () => undefined,
 };
 
-const ThemeContext = createContext<null | typeof defaultValues>(null);
+const ThemeContext = createContext<null | {
+  mode: string;
+  toggleThemeMode: () => void;
+}>(null);
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [themeMode, setThemeMode] = useState(defaultValues.mode);
-  const handleToggleThemeMode = () => {
+  const handleToggleThemeMode = () =>
     setThemeMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
-  };
 
   const state = {
     mode: themeMode,

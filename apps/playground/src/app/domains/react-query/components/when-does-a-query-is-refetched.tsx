@@ -1,6 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
+type Todo = {
+  id: string;
+  title: string;
+};
+
 const whenDoesAQueryIsRefetchedKey = 'when-does-a-query-is-refetched';
 const fetchTodos = async () => {
   const response = await fetch(
@@ -12,7 +17,7 @@ const fetchTodos = async () => {
 };
 
 const TodoDisplay01 = () => {
-  const { data } = useQuery({
+  const { data } = useQuery<Todo[]>({
     queryKey: [whenDoesAQueryIsRefetchedKey],
     queryFn: fetchTodos,
     gcTime: 1000 * 7,
@@ -31,7 +36,7 @@ const TodoDisplay01 = () => {
 };
 
 const TodoDisplay02 = () => {
-  const { data } = useQuery({
+  const { data } = useQuery<Todo[]>({
     queryKey: [whenDoesAQueryIsRefetchedKey],
     queryFn: fetchTodos,
     gcTime: 1000 * 7,

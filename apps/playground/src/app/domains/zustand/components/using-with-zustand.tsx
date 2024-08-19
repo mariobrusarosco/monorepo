@@ -28,8 +28,8 @@ const AddToCartSection = () => {
   return (
     <div>
       <h3>Add to Cart</h3>
-      <button onClick={() => addToCart({ name: 'item 1' })}>Add item 1</button>
-      <button onClick={() => addToCart({ name: 'item 2' })}>Add item 2</button>
+      <button onClick={() => addToCart('item 1')}>Add item 1</button>
+      <button onClick={() => addToCart('item 2')}>Add item 2</button>
     </div>
   );
 };
@@ -41,8 +41,8 @@ const CartDisplay = () => {
     <div>
       <h3>Cart</h3>
       <ul>
-        {cart.map((item, index) => (
-          <li key={index}>{item.name}</li>
+        {cart.map(({ item }) => (
+          <li key={item}>{item}</li>
         ))}
       </ul>
     </div>

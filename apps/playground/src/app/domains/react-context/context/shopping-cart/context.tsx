@@ -6,25 +6,30 @@ type ShoppingCartContextType = {
   logout: () => void;
   addToCart: (item: string) => void;
   removeFromCart: (item: string) => void;
-  cart: { item: string }[];
+  cart: { name: string }[];
 };
 
 const useContextStore = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState('');
   const [cart, setCart] = useState<{ name: string }[]>([]);
 
   return {
     user,
     login: () => setUser('Mario'),
-    logout: () => setUser(null),
-    addToCart: (item) => setCart([...cart, { name: item }]),
-    removeFromCart: (item) => setCart(cart.filter((i) => i !== item)),
+    logout: () => setUser(''),
+    addToCart: (item: string) => setCart([...cart, { name: item }]),
+    removeFromCart: (item: string) =>
+      setCart(cart.filter(({ name }) => item !== name)),
     cart,
   };
 };
 
 const ShoppingCartContext = createContext<ShoppingCartContextType | null>(null);
-export const ShoppingCartProvider = ({ children }) => {
+export const ShoppingCartProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const store = useContextStore();
   return (
     <ShoppingCartContext.Provider value={store}>

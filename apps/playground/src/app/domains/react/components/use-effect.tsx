@@ -46,12 +46,12 @@ const CancellingEffectsViaCleanup = () => {
     },
   ]);
   const activeEffect = effects.find((effect) => effect.status === 'active');
-  const handleNewEffect = (effectStatus: boolean) => {
+  const handleNewEffect = () => {
     setEffects((prev) => [
       ...prev,
       {
         id: prev.length + 1,
-        active: effectStatus,
+        status: 'active',
       },
     ]);
   };
@@ -104,7 +104,7 @@ const fetchData = async ({ postId }: { postId: string }) => {
 
 const DealingWithAsyncEffects = () => {
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<any[]>([]);
   const [postId, setPostId] = useState('1');
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const DealingWithAsyncEffects = () => {
       const data = await fetchData({ postId });
 
       // Updating states that are related with the behavior of fetchData().
-      setResults(data);
+      setResults([data.posts]);
       setLoading(false);
     };
 
@@ -151,7 +151,7 @@ const DealingWithAsyncEffects = () => {
       ) : (
         <ul>
           {results.map((result, index) => (
-            <li key={index}>{result.title}</li>
+            <li key={index}>{result}</li>
           ))}
         </ul>
       )}

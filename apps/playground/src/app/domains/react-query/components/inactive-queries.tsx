@@ -1,6 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
+type Todo = {
+  id: string;
+  title: string;
+};
+
 const inactiveQueriesKey = 'inactive-queries';
 const fetchTodos = async () => {
   const response = await fetch(
@@ -12,7 +17,7 @@ const fetchTodos = async () => {
 };
 
 const TodoDisplay01 = () => {
-  const { data } = useQuery({
+  const { data } = useQuery<Todo[]>({
     queryKey: [inactiveQueriesKey],
     queryFn: fetchTodos,
     gcTime: 1000 * 7,
@@ -32,7 +37,7 @@ const TodoDisplay01 = () => {
 };
 
 const TodoDisplay02 = () => {
-  const { data } = useQuery({
+  const { data } = useQuery<Todo[]>({
     queryKey: [inactiveQueriesKey],
     queryFn: fetchTodos,
     gcTime: 1000 * 7,
