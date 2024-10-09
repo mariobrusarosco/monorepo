@@ -12,6 +12,9 @@ export const AppHeader = () => {
       <Link to="/code-splitting" className="">
         Code Splitting
       </Link>{' '}
+      <Link to="/training" className="">
+        Training
+      </Link>{' '}
     </header>
   );
 };

@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@monorepo/code-splitting": ["libs/code-splitting/src/index.ts"],
       "@monorepo/react": ["libs/react/src/index.ts"],
-      "@monorepo/routing": ["libs/routing/src/index.ts"]
+      "@monorepo/routing": ["libs/routing/src/index.ts"],
+      "@monorepo/training": ["libs/training/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -18,8 +18,12 @@ import { Route as IndexImport } from './routes/index'
 // Create Virtual Routes
 
 const CodeSplittingLazyImport = createFileRoute('/code-splitting')()
+const TrainingIndexLazyImport = createFileRoute('/training/')()
 const ReactIndexLazyImport = createFileRoute('/react/')()
 const ReactHooksLazyImport = createFileRoute('/react/hooks')()
+const ReactConcurrentFeaturesLazyImport = createFileRoute(
+  '/react/concurrent-features',
+)()
 
 // Create/Update Routes
 
@@ -35,6 +39,13 @@ const IndexRoute = IndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const TrainingIndexLazyRoute = TrainingIndexLazyImport.update({
+  path: '/training/',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/training/index.lazy').then((d) => d.Route),
+)
+
 const ReactIndexLazyRoute = ReactIndexLazyImport.update({
   path: '/react/',
   getParentRoute: () => rootRoute,
@@ -44,6 +55,14 @@ const ReactHooksLazyRoute = ReactHooksLazyImport.update({
   path: '/react/hooks',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/react/hooks.lazy').then((d) => d.Route))
+
+const ReactConcurrentFeaturesLazyRoute =
+  ReactConcurrentFeaturesLazyImport.update({
+    path: '/react/concurrent-features',
+    getParentRoute: () => rootRoute,
+  } as any).lazy(() =>
+    import('./routes/react/concurrent-features.lazy').then((d) => d.Route),
+  )
 
 // Populate the FileRoutesByPath interface
 
@@ -63,6 +82,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CodeSplittingLazyImport
       parentRoute: typeof rootRoute
     }
+    '/react/concurrent-features': {
+      id: '/react/concurrent-features'
+      path: '/react/concurrent-features'
+      fullPath: '/react/concurrent-features'
+      preLoaderRoute: typeof ReactConcurrentFeaturesLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/react/hooks': {
       id: '/react/hooks'
       path: '/react/hooks'
@@ -77,6 +103,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReactIndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/training/': {
+      id: '/training/'
+      path: '/training'
+      fullPath: '/training'
+      preLoaderRoute: typeof TrainingIndexLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -85,8 +118,10 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren({
   IndexRoute,
   CodeSplittingLazyRoute,
+  ReactConcurrentFeaturesLazyRoute,
   ReactHooksLazyRoute,
   ReactIndexLazyRoute,
+  TrainingIndexLazyRoute,
 })
 
 /* prettier-ignore-end */
@@ -99,8 +134,10 @@ export const routeTree = rootRoute.addChildren({
       "children": [
         "/",
         "/code-splitting",
+        "/react/concurrent-features",
         "/react/hooks",
-        "/react/"
+        "/react/",
+        "/training/"
       ]
     },
     "/": {
@@ -109,11 +146,17 @@ export const routeTree = rootRoute.addChildren({
     "/code-splitting": {
       "filePath": "code-splitting.lazy.tsx"
     },
+    "/react/concurrent-features": {
+      "filePath": "react/concurrent-features.lazy.tsx"
+    },
     "/react/hooks": {
       "filePath": "react/hooks.lazy.tsx"
     },
     "/react/": {
       "filePath": "react/index.lazy.tsx"
+    },
+    "/training/": {
+      "filePath": "training/index.lazy.tsx"
     }
   }
 }

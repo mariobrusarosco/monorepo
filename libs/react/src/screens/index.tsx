@@ -10,6 +10,9 @@ export const ReactScreen = () => {
           <li>
             <Link to="/react/hooks">Hooks</Link>
           </li>
+          <li>
+            <Link to="/react/concurrent-features">Concurrent Features</Link>
+          </li>
         </ul>
       </menu>
     </div>
